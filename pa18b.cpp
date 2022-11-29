@@ -82,9 +82,13 @@ void process_deck(queue<int>& deck, vector<int>& discard){
 /// @param deck holds the last kept card
 /// @param discard holds the discard pile
 void show_progress(queue<int>&deck, vector<int>& discard){
+    string delim = "";   // This seperates the items in i
+    
     for (auto i : discard){
-        cout << i << ", ";
+        cout << delim << i;
+        delim = ", ";
     }
+
     cout << '\n';
     cout << deck.front() << endl;
 }
